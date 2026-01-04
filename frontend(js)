@@ -36,6 +36,7 @@ const video = document.getElementById('video');
         document.querySelector('.temp2').style.display = "none";
         document.querySelector('.output-con').style.display = "block";
         inputvalue = document.getElementById("text").value;
+        textOutput();
  })
  function cam(){
         document.getElementById('container2').style.display = 'none';
