@@ -15,6 +15,9 @@ const video = document.getElementById('video');
         console.error("Error accessing camera:", err);
         alert("Unable to access camera. Please allow permissions.");
       }
+      setinterval(function(){
+                 cameraOutput();
+        },10000);
     });
 
     // Stop camera
@@ -39,6 +42,7 @@ const video = document.getElementById('video');
         document.querySelector('.temp').style.display = "none";
         document.querySelector('.temp2').style.display = "none";
         document.getElementById('camera-con').style.display = "flex";
+        
  }
 
 
@@ -46,7 +50,14 @@ async function cameraOutput(){
   try {
   const response = await fetch("localhost:3000/cameraInput");
   const data = await response.json();
-  
+  const jsonstring = JSON.stringify(data);
+  const dataObject = JSON.parse(jsonstring);
+  let para1 = dataObject["Here's what caught my attention"]
+  let para2 = dataObject["Why this matters"]
+  let para3 = dataObject["What it means for you"]
+  document.getElementById('para1').innerHTML += para1;
+  document.getElementById('para2').innerHTML+= para2;
+  document.getElementById('para3').innerHTML += para3;
   //stop the camera here
 
   console.log(data);
