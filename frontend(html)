@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="super-container" id="super-container">
+     <div class="container1">
+         <br />
+         <p>
+         Food
+         <img src="https://static.vecteezy.com/system/resources/previews/023/363/687/non_2x/green-leaf-icon-free-png.png">
+         <b>Sense</b> 
+         <br />
+         <span>An Ai Co-pilot for understanding Ingredients</span>
+         <br />
+         <br />
+         <span class="h2 temp">Understand what matters before you decide</span>
+         <br />
+         <span class ='temp2'>
+             show an ingredient label i will do the thinking
+         </span>
+         </p>
+         </div>
+         <div class="container2" id="container2">
+             <div class="body1">
+             <div class="search">
+             <div>
+      <textarea type="text" placeholder="Paste ingredients..." id="text"></textarea>
+      </div>
+      <div class="camera">
+        <i class="fa fa-camera icon1"  aria-hidden="true" onclick="cam()"></i>
+        <br />
+        <span>Upload a photo</span>
+    </div>
+    </div>
+         <div id="submit" class="submit">
+         <div>
+         Help Me Understand
+         </div>
+         </div>
+         </div>
+         </div>
+         <div class ="output-con" id="output-con">
+        <center>
+            <div class="box">
+                <i class="fa fa-eye icon1"  aria-hidden="true"></i><p class="p">
+                <span>
+                    Here's what caught my attention
+                    </span>
+                    <br />
+                    <br />
+Rich in whole grains and natural fiber. Contains oats and quinoa which provide sustained energy throughout the day.
+                </p>
+            </div>
+            <div class="box">
+                <i class="fa fa-star icon 1"  aria-hidden="true"></i>
+                <p class="p">
+                <span>
+                Why this matters
+                </span>
+                <br />
+                <br />
+Contains added sugars (12g per serving) and maltodextrin, a processed additive that can spike blood sugar quickly.
+</p>
+            </div>
+            <div class="box">
+                <i class="fa fa-circle icon1"  aria-hidden="true"></i>
+                <p class="p">
+                <span>
+                    What it means for you 
+ </span>
+ <br />
+                <br />
+What this means for you
+A decent choice for an occasional breakfast, but consider pairing with protein or healthy fats to balance the sugar content.
+
+
+                </p>
+            </div>
+            <div class="box">
+                <i class="fa fa-square icon1"  aria-hidden="true"></i>
+            </div>
+            </center>
+        </div>
+        <new>
+            <div id ="camera-con" class="camera-con">
+    <h2>Capture Ingredients label</h2>
+  <video id="video" autoplay playsinline></video>
+  <br>
+  <button id="startBtn">Start Camera</button>
+  <button id="stopBtn">Stop Camera</button>
+</div>
+
+        </new>
+</body>
+<script src="script.js"></script>
+</html>

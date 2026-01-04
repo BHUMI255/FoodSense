@@ -1,0 +1,40 @@
+const video = document.getElementById('video');
+    const startBtn = document.getElementById('startBtn');
+    const stopBtn = document.getElementById('stopBtn');
+    let stream = null;
+
+    // Start camera
+    startBtn.addEventListener('click', async () => {
+      try {
+        stream = await navigator.mediaDevices.getUserMedia({
+          video: { facingMode: "user" }, // "environment" for back camera on mobile
+          audio: false
+        });
+        video.srcObject = stream;
+      } catch (err) {
+        console.error("Error accessing camera:", err);
+        alert("Unable to access camera. Please allow permissions.");
+      }
+    });
+
+    // Stop camera
+    stopBtn.addEventListener('click', () => {
+      if (stream) {
+        stream.getTracks().forEach(track => track.stop());
+        video.srcObject = null;
+      }
+    });
+// adding submit button function
+ const submit = document.getElementById('submit');
+ submit.addEventListener('click',function(){
+        document.getElementById('container2').style.display = 'none';
+        document.querySelector('.temp').style.display = "none";
+        document.querySelector('.temp2').style.display = "none";
+        document.querySelector('.output-con').style.display = "block";
+ })
+ function cam(){
+        document.getElementById('container2').style.display = 'none';
+        document.querySelector('.temp').style.display = "none";
+        document.querySelector('.temp2').style.display = "none";
+        document.getElementById('camera-con').style.display = "flex";
+ }
