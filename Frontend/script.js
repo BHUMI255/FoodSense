@@ -16,7 +16,7 @@ const video = document.getElementById('video');
         console.error("Error accessing camera:", err);
         alert("Unable to access camera. Please allow permissions.");
       }
-      setInterval(function(){
+      setTimeout(function(){
                  cameraOutput();
                  document.getElementById('camera-con').style.display = 'none';
                  document.querySelector('.output-con').style.display = "block";
